@@ -91,8 +91,8 @@ st.markdown(
 )
 
 # Заголовок
-st.title("📺 Анализ промоутинга на телевидении")
-st.markdown("Интерактивный дашборд для анализа факторов, формирующих промоутинг.")
+st.title("📺 Анализ стоимости спонсорской рекламы на телевидении")
+st.markdown("Интерактивный дашборд для анализа факторов, формирующих стоимость рекламы.")
 
 # Боковая панель для фильтров
 st.sidebar.header("Фильтры")
@@ -105,26 +105,26 @@ start_date, end_date = date_range
 channels = df['Канал'].unique()
 selected_channels = st.sidebar.multiselect("Каналы", channels, default=channels)
 
-# Фильтр по времени
+# Фильтр по временному слоту
 time_slots = df['Временной_слот'].unique()
-selected_time_slots = st.sidebar.multiselect("Временной промежуток", time_slots, default=time_slots)
+selected_time_slots = st.sidebar.multiselect("Временные слоты", time_slots, default=time_slots)
 
 # Фильтр по типу программы
 program_types = df['Тип_программы'].unique()
-selected_program_types = st.sidebar.multiselect("Программы", program_types, default=program_types)
+selected_program_types = st.sidebar.multiselect("Типы программ", program_types, default=program_types)
 
 # Фильтр по типу рекламодателя
 advertiser_types = df['Тип_рекламодателя'].unique()
-selected_advertiser_types = st.sidebar.multiselect("Рекламодатели", advertiser_types, default=advertiser_types)
+selected_advertiser_types = st.sidebar.multiselect("Типы рекламодателей", advertiser_types, default=advertiser_types)
 
 # Применение фильтров
 filtered_df = df[
     (df['Дата'] >= pd.to_datetime(start_date)) &
     (df['Дата'] <= pd.to_datetime(end_date)) &
     (df['Канал'].isin(selected_channels)) &
-    (df['Временной диапазон'].isin(selected_time_slots)) &
-    (df['Программы'].isin(selected_program_types)) &
-    (df['Рекламодатель'].isin(selected_advertiser_types))
+    (df['Временной_слот'].isin(selected_time_slots)) &
+    (df['Тип_программы'].isin(selected_program_types)) &
+    (df['Тип_рекламодателя'].isin(selected_advertiser_types))
 ]
 
 # Вкладки

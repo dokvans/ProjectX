@@ -19,7 +19,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         background-attachment: fixed;
     }
     .stApp::before {
@@ -29,26 +29,33 @@ st.markdown(
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.96);
+        background-color: rgba(248, 249, 250, 0.96);
         z-index: -1;
     }
     h1, h2, h3 {
         color: #2d3748;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: -0.3px;
         margin-bottom: 0.5rem;
     }
+    h1 {
+        background: linear-gradient(90deg, #4361ee, #3a0ca3);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
     .stMetric {
         background: white;
-        padding: 1.1rem;
+        padding: 1.2rem;
         border-radius: 12px;
-        border-left: 4px solid #4299e1; /* мягкий акцент слева */
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        border-left: 4px solid #4361ee;
+        box-shadow: 0 3px 10px rgba(67, 97, 238, 0.12);
         transition: all 0.25s ease;
     }
     .stMetric:hover {
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(66, 153, 225, 0.15);
+        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.18);
     }
     .stMetric > div {
         color: #1a202c;
@@ -56,7 +63,7 @@ st.markdown(
         font-size: 1.4rem;
     }
     .stMetric > label {
-        color: #718096 !important;
+        color: #4a5568 !important;
         font-size: 0.95em;
         font-weight: 500;
     }

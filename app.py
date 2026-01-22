@@ -14,14 +14,18 @@ def load_data():
 
 df = load_data()
 
-# Элегантный стиль
+# Элегантный тёмно-зелёный градиентный стиль с белым текстом
 st.markdown(
     """
     <style>
+    /* Тёмно-зелёный градиентный фон */
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #0b2d2d 0%, #1a3a2a 100%);
         background-attachment: fixed;
+        color: white;
     }
+
+    /* Лёгкий оверлей для улучшения читаемости (опционально) */
     .stApp::before {
         content: "";
         position: fixed;
@@ -29,18 +33,57 @@ st.markdown(
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(0, 0, 0, 0.1);
         z-index: -1;
     }
+
+    /* Заголовки — белые, жирные, с лёгким свечением */
     h1, h2, h3 {
-        color: #667eea;
+        color: white !important;
         font-weight: 600;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
     }
+
+    /* Метрики — полупрозрачные карточки с размытием */
     .stMetric {
-        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         padding: 1rem;
-        border-radius: 10px;
-        border: 1px solid #667eea30;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Текст внутри метрик — белый */
+    .stMetric > div {
+        color: white !important;
+        font-weight: 700;
+    }
+    .stMetric > label {
+        color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    /* Общий текст (markdown, info и т.д.) — светлый */
+    .stMarkdown, .stText, .stInfo, .stSuccess, .stWarning {
+        color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    /* Sidebar — немного светлее фона, но в той же палитре */
+    section[data-testid="stSidebar"] {
+        background: rgba(15, 40, 35, 0.7);
+        border-right: 1px solid rgba(100, 200, 180, 0.2);
+        color: white;
+    }
+    section[data-testid="stSidebar"] * {
+        color: rgba(230, 255, 245, 0.95) !important;
+    }
+
+    /* Выделение выбранных элементов в sidebar */
+    section[data-testid="stSidebar"] .stMultiSelect div[data-baseweb="select"] > div,
+    section[data-testid="stSidebar"] input {
+        background-color: rgba(20, 60, 50, 0.5);
+        color: white;
     }
     </style>
     """,

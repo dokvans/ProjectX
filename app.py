@@ -14,12 +14,12 @@ def load_data():
 
 df = load_data()
 
-# Элегантный стиль
+# Привлекающий внимание, но ненавязчивый стиль
 st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
         background-attachment: fixed;
     }
     .stApp::before {
@@ -29,18 +29,36 @@ st.markdown(
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.96);
         z-index: -1;
     }
     h1, h2, h3 {
-        color: #667eea;
+        color: #2d3748;
         font-weight: 600;
+        letter-spacing: -0.3px;
+        margin-bottom: 0.5rem;
     }
     .stMetric {
-        background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        border: 1px solid #667eea30;
+        background: white;
+        padding: 1.1rem;
+        border-radius: 12px;
+        border-left: 4px solid #4299e1; /* мягкий акцент слева */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        transition: all 0.25s ease;
+    }
+    .stMetric:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(66, 153, 225, 0.15);
+    }
+    .stMetric > div {
+        color: #1a202c;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    .stMetric > label {
+        color: #718096 !important;
+        font-size: 0.95em;
+        font-weight: 500;
     }
     </style>
     """,

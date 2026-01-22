@@ -4,7 +4,7 @@
 
 ## 🚀 Live Demo
 
-**[Открыть приложение]([https://tv-sponsorship-cost-factors-lr6r326w4qmqujuggabwdm.streamlit.app/](https://projectx-lycyjj8tpvxvzkfqezxtpt.streamlit.app/#analiz-stoimosti-sponsorskoy-reklamy-na-televidenii))**
+**[Открыть приложение](https://projectx-lycyjj8tpvxvzkfqezxtpt.streamlit.app/#analiz-stoimosti-sponsorskoy-reklamy-na-televidenii)**
 
 ## Описание
 

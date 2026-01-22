@@ -1,11 +1,6 @@
-# 📺 Анализ стоимости спонсорской рекламы на телевидении
+# 📺 Анализ стоимости промоутинга на телевидении
 
 Интерактивный дашборд для анализа факторов, формирующих стоимость рекламы на ТВ.
-
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.50%2B-FF4B4B?logo=streamlit)](https://streamlit.io)
-[![Pandas](https://img.shields.io/badge/Pandas-2.3%2B-150458?logo=pandas)](https://pandas.pydata.org)
-[![Plotly](https://img.shields.io/badge/Plotly-6.3%2B-2962FF?logo=plotly)](https://plotly.com/python/)
 
 ## 🚀 Live Demo
 

@@ -111,7 +111,7 @@ selected_time_slots = st.sidebar.multiselect("Временные слоты", ti
 
 # Фильтр по типу программы
 program_types = df['Тип_программы'].unique()
-selected_program_types = st.sidebar.multiselect("Типы программ", program_types, default=program_types)
+selected_program_types = st.sidebar.multiselect("Программы", program_types, default=program_types)
 
 # Фильтр по типу рекламодателя
 advertiser_types = df['Тип_рекламодателя'].unique()
@@ -170,9 +170,9 @@ with tab4:
     # Выбор параметров для сводной таблицы
     col1, col2 = st.columns(2)
     with col1:
-        pivot_index = st.selectbox("Строки", ['Канал', 'Временной_слот', 'Тип_программы', 'Тип_рекламодателя'])
+        pivot_index = st.selectbox("Строки", ['Канал', 'Временной_слот', 'Программы', 'Тип_рекламодателя'])
     with col2:
-        pivot_columns = st.selectbox("Столбцы", ['Временной_слот', 'Канал', 'Тип_программы', 'Тип_рекламодателя'])
+        pivot_columns = st.selectbox("Столбцы", ['Временной_слот', 'Канал', 'Программы', 'Тип_рекламодателя'])
     
     # Сводная таблица: средняя стоимость
     pivot_df = filtered_df.pivot_table(

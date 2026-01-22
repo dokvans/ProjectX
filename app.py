@@ -14,63 +14,84 @@ def load_data():
 
 df = load_data()
 
-# Привлекающий внимание, но ненавязчивый стиль
+# Современный дашбордный стиль
 st.markdown(
     """
     <style>
+    /* Фон приложения */
     .stApp {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
         background-attachment: fixed;
     }
+
+    /* Контейнер поверх градиента */
     .stApp::before {
         content: "";
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(248, 249, 250, 0.96);
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.96);
         z-index: -1;
     }
-    h1, h2, h3 {
-        color: #2d3748;
-        font-weight: 700;
-        letter-spacing: -0.3px;
-        margin-bottom: 0.5rem;
-    }
+
+    /* Заголовки */
     h1 {
-        background: linear-gradient(90deg, #4361ee, #3a0ca3);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-    .stMetric {
-        background: white;
-        padding: 1.2rem;
-        border-radius: 12px;
-        border-left: 4px solid #4361ee;
-        box-shadow: 0 3px 10px rgba(67, 97, 238, 0.12);
-        transition: all 0.25s ease;
-    }
-    .stMetric:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.18);
-    }
-    .stMetric > div {
-        color: #1a202c;
+        color: #4338ca;
         font-weight: 700;
-        font-size: 1.4rem;
+        letter-spacing: -0.5px;
     }
-    .stMetric > label {
-        color: #4a5568 !important;
-        font-size: 0.95em;
+    h2, h3 {
+        color: #4f46e5;
+        font-weight: 600;
+    }
+
+    /* Карточки / метрики */
+    .stMetric {
+        background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+        padding: 1.2rem;
+        border-radius: 14px;
+        border: 1px solid #c7d2fe;
+        box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+    }
+
+    /* Подписи метрик */
+    .stMetric label {
+        color: #6366f1;
         font-weight: 500;
     }
+
+    /* Значения метрик */
+    .stMetric div {
+        color: #1e1b4b;
+        font-weight: 700;
+    }
+
+    /* Sidebar */
+    section[data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+        border-right: 1px solid #e5e7eb;
+    }
+
+    /* Кнопки */
+    .stButton > button {
+        background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+        color: white;
+        border-radius: 10px;
+        padding: 0.6rem 1.2rem;
+        border: none;
+        box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+        transition: all 0.2s ease;
+    }
+
+    .stButton > button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(79, 70, 229, 0.35);
+    }
+
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # Заголовок
 st.title("📺 Анализ стоимости промоутинга на телевидении")
